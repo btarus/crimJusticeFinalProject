@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Fraud Case: Jordan Reynolds</title>
+    <title>Cyber Fraud Case: Kasongo Wamunyoro</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -12,10 +12,13 @@
             font-family: 'Inter', sans-serif;
             background-color: #f0f4f8; /* Light blue-grey background */
             display: flex;
+            flex-direction: column; /* Allow content and footer to stack */
             justify-content: center;
-            align-items: flex-start; /* Align to top for longer content */
+            align-items: center; /* Align to top for longer content */
             min-height: 100vh;
             padding: 2rem;
+            position: relative; /* For footer positioning */
+            padding-bottom: 4rem; /* Space for the footer */
         }
         .container {
             background-color: #ffffff;
@@ -66,12 +69,49 @@
             border: 1px solid #ef4444; /* Red border */
             box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2);
         }
+        /* Style for highlighted terms */
+        .highlight {
+            color: #1d4ed8; /* A darker blue for good visibility */
+            font-weight: 600;
+        }
+        /* Background image for Overview page */
+        #overview-sheet {
+            background-image: url('https://placehold.co/900x600/f0f4f8/888888?text=Cyber+Security+Background'); /* Placeholder image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #333; /* Adjust text color for readability over image */
+        }
+        /* Ensure text is readable over background image */
+        #overview-sheet h2,
+        #overview-sheet h3,
+        #overview-sheet p,
+        #overview-sheet li {
+            background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background for text */
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            margin-bottom: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 1rem;
+            background-color: #cbd5e1; /* Light gray background for footer */
+            color: #4a5568;
+            font-size: 0.875rem;
+            border-top: 1px solid #e2e8f0;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+        }
     </style>
 </head>
 <body>
     <div class="container p-6 md:p-8">
         <!-- Header and Navigation Tabs -->
-        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6 text-center">Cyber Fraud Case: Jordan Reynolds</h1>
+        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6 text-center">Cyber Fraud Case: Kasongo Wamunyoro</h1>
 
         <div class="flex flex-wrap justify-center bg-gray-100 rounded-lg p-2 mb-8 shadow-sm">
             <button class="tab-button flex-1 py-3 px-4 rounded-lg text-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" data-target="overview-sheet">Overview</button>
@@ -81,20 +121,20 @@
         </div>
 
         <!-- Sheet 1: Overview -->
-        <div id="overview-sheet" class="sheet active p-4 md:p-6 bg-white rounded-lg shadow-inner">
-            <h2 class="text-2xl font-bold text-gray-700 mb-4">Case Overview</h2>
+        <div id="overview-sheet" class="sheet active p-4 md:p-6 rounded-lg shadow-inner">
+            <h2 class="text-2xl font-bold mb-4">Case Overview</h2>
             <div class="mb-4">
-                <h3 class="text-xl font-semibold text-gray-600 mb-2">Case Summary:</h3>
-                <p class="text-gray-700 leading-relaxed">Jordan Reynolds, a 28-year-old resident of Washington, has been arrested on charges of cyber fraud and identity theft.</p>
+                <h3 class="text-xl font-semibold mb-2">Case Summary:</h3>
+                <p class="leading-relaxed">Kasongo Wamunyoro, a 31-year-old resident of Kent, Washington, was <span class="highlight">arrested</span> on 15th May 2025 on charges of cyber fraud and identity theft. He was denied <span class="highlight">bail</span> by <span class="highlight">the judge</span> because of his flight risk, highlighting the severity of the <span class="highlight">crime</span> committed.</p>
             </div>
             <div class="mb-4">
-                <h3 class="text-xl font-semibold text-gray-600 mb-2">Crime Details:</h3>
-                <p class="text-gray-700 leading-relaxed">Jordan Reynolds used sophisticated phishing techniques and malware to acquire stolen financial data, which he then used to commit multiple instances of wire fraud, transferring funds from victims' bank accounts to his own shell accounts.</p>
+                <h3 class="text-xl font-semibold mb-2">Crime Details:</h3>
+                <p class="leading-relaxed">Kasongo used phishing techniques and malware to acquire stolen financial data, which he then used to commit multiple instances of wire fraud, transferring funds from victims' bank accounts to his own shell accounts. This deliberate <span class="highlight">crime</span> involved sophisticated digital methods.</p>
             </div>
             <div>
-                <h3 class="text-xl font-semibold text-gray-600 mb-2">Legal Statutes:</h3>
-                <ul class="list-disc list-inside text-gray-700 space-y-2">
-                    <li><strong>Identity Theft:</strong> Washington State Law – RCW 9A.56.020 – Classified as a Felony.</li>
+                <h3 class="text-xl font-semibold mb-2">Legal Statutes:</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><strong>Identity Theft:</strong> Washington State Law – RCW 9A.56.020 and RCW 9A. 9A.90 – Classified as a Felony.</li>
                     <li><strong>Wire Fraud:</strong> Federal Crime – 18 U.S.C. §1343.</li>
                 </ul>
             </div>
@@ -104,19 +144,19 @@
         <div id="policing-sheet" class="sheet p-4 md:p-6 bg-white rounded-lg shadow-inner">
             <h2 class="text-2xl font-bold text-gray-700 mb-4">Policing: Arrest & Investigation</h2>
             <div class="mb-4">
-                <h3 class="text-xl font-semibold text-gray-600 mb-2">How Law Enforcement Tracked Jordan:</h3>
+                <h3 class="text-xl font-semibold text-gray-600 mb-2">How Law Enforcement Tracked Kasongo:</h3>
                 <ul class="list-disc list-inside text-gray-700 space-y-2">
                     <li>The FBI cybercrime unit initiated an investigation after receiving multiple reports of fraudulent transactions linked by a unique digital footprint.</li>
-                    <li>Advanced digital forensic analysis of server logs and cryptocurrency transactions led agents to Jordan's IP address and online aliases.</li>
-                    <li>A court-ordered warrant allowed for the monitoring of his online activities, ultimately pinpointing his physical location.</li>
+                    <li>Advanced digital forensic analysis of server logs and cryptocurrency transactions led agents to Kasongo's IP address and online aliases.</li>
+                    <li>A court-ordered <span class="highlight">warrant</span> allowed for the monitoring of his online activities, ultimately pinpointing his physical location.</li>
                 </ul>
             </div>
             <div>
-                <h3 class="text-xl font-semibold text-gray-600 mb-2">Arrest Details:</h3>
+                <h3 class="text-xl font-semibold text-gray-600 mb-2">Details of Arrest:</h3>
                 <ul class="list-disc list-inside text-gray-700 space-y-2">
-                    <li>Jordan Reynolds was arrested at his apartment in Seattle, Washington, during an early morning raid.</li>
+                    <li>Kasongo was <span class="highlight">arrested</span> at his apartment in Kent, Washington, during an early morning raid conducted by a local <span class="highlight">patrol unit</span> in coordination with federal agents.</li>
                     <li>During the arrest, agents discovered extensive evidence, including hard drives containing vast amounts of stolen financial data, direct access to hacked bank accounts, and several high-quality fake identification documents.</li>
-                    <li>Forensic teams immediately began processing his digital devices for further evidence.</li>
+                    <li>Forensic teams immediately began processing his digital devices for further evidence related to the <span class="highlight">crime</span>.</li>
                 </ul>
             </div>
         </div>
@@ -127,13 +167,14 @@
             <div class="mb-4">
                 <h3 class="text-xl font-semibold text-gray-600 mb-2">Charges & Legal Process:</h3>
                 <ul class="list-disc list-inside text-gray-700 space-y-2">
-                    <li>Jordan Reynolds faces serious charges including multiple counts of identity theft (state) and wire fraud (federal).</li>
-                    <li>Due to the nature of the crimes, the case falls under both federal and state jurisdiction, with the federal charges likely taking precedence given their severity and interstate implications.</li>
+                    <li>Kasongo faces serious charges including multiple counts of identity theft (state) and wire fraud (federal). Upon his <span class="highlight">arraignment</span>, the charges were formally read in court.</li>
+                    <li>Due to the nature of the crimes, the case falls under both federal and state jurisdiction, with the federal charges likely taking precedence given their severity and interstate implications. The <span class="highlight">adjudication</span> process will determine his guilt or innocence.</li>
+                    <li>A <span class="highlight">grand jury</span> was convened to review the evidence and decide whether there was sufficient probable cause to issue an indictment.</li>
                 </ul>
             </div>
             <div class="mb-6">
                 <h3 class="text-xl font-semibold text-gray-600 mb-3">Plea Bargain vs. Trial Outcomes:</h3>
-                <p class="text-gray-700 mb-3">Select an option below to see the potential sentencing:</p>
+                <p class="text-gray-700 mb-3">Kasongo has the option to consider a <span class="highlight">plea deal</span> offered by the <span class="highlight">prosecution attorney</span>, or proceed to a <span class="highlight">trial</span> where a <span class="highlight">jury</span> will hear the evidence. Select an option below to see the potential sentencing:</p>
                 <select id="plea-trial-select" class="form-select block w-full px-4 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-lg transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none shadow-sm cursor-pointer">
                     <option value="default" selected disabled>Choose an outcome...</option>
                     <option value="plea">Plea Bargain (Guilty Plea)</option>
@@ -145,11 +186,11 @@
                 <h3 class="text-xl font-semibold text-gray-600 mb-3">Sentencing Options:</h3>
                 <div id="plea-sentencing" class="sentencing-option bg-gray-100 text-gray-700">
                     <p class="font-bold">Plea Deal:</p>
-                    <p><span class="font-semibold" id="plea-years">5 years</span> in federal prison + <span class="font-semibold" id="plea-fine">$50,000</span> fine.</p>
+                    <p>If Kasongo enters a <span class="highlight">guilty</span> plea, he will receive <span class="font-semibold" id="plea-years">5 years</span> in federal prison + <span class="font-semibold" id="plea-fine">$50,000</span> fine, as agreed upon with the prosecution attorney. This avoids a full <span class="highlight">trial</span>.</p>
                 </div>
                 <div id="trial-sentencing" class="sentencing-option bg-gray-100 text-gray-700">
                     <p class="font-bold">Trial Conviction:</p>
-                    <p><span class="font-semibold" id="trial-years">10 years</span> in federal prison + <span class="font-semibold" id="trial-fine">$100,000</span> fine.</p>
+                    <p>If he proceeds to <span class="highlight">trial</span> and is <span class="highlight">convicted</span> by the <span class="highlight">jury</span>, he faces <span class="font-semibold" id="trial-years">10 years</span> in federal prison + <span class="font-semibold" id="trial-fine">$100,000</span> fine. His <span class="highlight">defense attorney</span> would have presented his case, but the evidence led to a <span class="highlight">guilty</span> verdict. Principles of <span class="highlight">double jeopardy</span> would prevent him from being tried again for the same offense if acquitted.</p>
                 </div>
             </div>
 
@@ -173,13 +214,17 @@
             <div>
                 <h3 class="text-xl font-semibold text-gray-600 mb-2">Fines & Restitution:</h3>
                 <ul class="list-disc list-inside text-gray-700 space-y-2">
-                    <li>Jordan Reynolds will be mandated to repay all victims for financial losses incurred due to his cyber fraud activities. This restitution is separate from any imposed fines.</li>
+                    <li>Kasongo will be mandated to repay all victims for financial losses incurred due to his cyber fraud activities. This restitution is separate from any imposed fines.</li>
                     <li>Mandatory financial ethics training programs will be required as part of his sentence, aiming to prevent future offenses.</li>
                     <li id="total-restitution-corrections">Total Fines and Restitution: <span class="font-bold" id="corrections-fines">N/A</span> (Based on Court Decision)</li>
                 </ul>
             </div>
         </div>
     </div>
+
+    <footer class="flex items-center justify-center p-4 text-sm text-gray-600">
+        <p>&copy; B. Tarus, CJ&101 - 35741, Final Project.</p>
+    </footer>
 
     <script>
         // JavaScript to handle sheet navigation and interactive elements
@@ -244,13 +289,13 @@
                 prisonYears = 5;
                 fines = 50000;
                 decisionText = 'Plea Bargain (Guilty Plea)';
-                correctionsText = `If Jordan pleads guilty, he will be sentenced to <strong>${prisonYears} years</strong> in federal prison. He will be eligible for parole after serving approximately <strong>${(prisonYears * 2 / 3).toFixed(2)} years</strong> (⅔ of sentence). Alternatively, if probation is granted, he must attend mandated cybercrime rehabilitation programs.`;
+                correctionsText = `If Kasongo pleads guilty, he will be sentenced to <strong>${prisonYears} years</strong> in federal prison. He will be eligible for parole after serving approximately <strong>${(prisonYears * 2 / 3).toFixed(2)} years</strong> (⅔ of sentence). Alternatively, if probation is granted, he must attend mandated cybercrime rehabilitation programs.`;
             } else if (selectedOption === 'trial') {
                 trialSentencingDiv.classList.add('active-trial');
                 prisonYears = 10;
                 fines = 100000;
                 decisionText = 'Trial (Conviction)';
-                correctionsText = `If Jordan is convicted after a trial, he will be sentenced to <strong>${prisonYears} years</strong> in federal prison. He will be eligible for parole after serving approximately <strong>${(prisonYears * 2 / 3).toFixed(2)} years</strong> (⅔ of sentence). This outcome generally does not involve probation due to the severity.`;
+                correctionsText = `If Kasongo is convicted after a trial, he will be sentenced to <strong>${prisonYears} years</strong> in federal prison. He will be eligible for parole after serving approximately <strong>${(prisonYears * 2 / 3).toFixed(2)} years</strong> (⅔ of sentence). This outcome generally does not involve probation due to the severity.`;
             }
 
             // Update summary section
