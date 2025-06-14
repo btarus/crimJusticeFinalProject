@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Fraud Case: Jordan Reynolds</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for better aesthetics and specific overrides */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-grey background */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align to top for longer content */
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 1rem; /* More rounded corners */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Softer shadow */
+            max-width: 900px;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .tab-button {
+            transition: all 0.2s ease-in-out;
+            background-color: #e2e8f0; /* Light grey for inactive tabs */
+            color: #4a5568; /* Darker text for inactive */
+            font-weight: 500;
+        }
+        .tab-button.active {
+            background-color: #3b82f6; /* Blue for active tab */
+            color: #ffffff;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2); /* Inner shadow for active tab */
+        }
+        .sheet {
+            display: none; /* Hide all sheets by default */
+        }
+        .sheet.active {
+            display: block; /* Show active sheet */
+            animation: fadeIn 0.5s ease-out; /* Fade in animation */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Conditional formatting for sentencing options */
+        .sentencing-option {
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        .sentencing-option.active-plea {
+            background-color: #d1fae5; /* Light green for plea */
+            border: 1px solid #34d399; /* Green border */
+            box-shadow: 0 2px 8px rgba(52, 211, 153, 0.2);
+        }
+        .sentencing-option.active-trial {
+            background-color: #fee2e2; /* Light red for trial */
+            border: 1px solid #ef4444; /* Red border */
+            box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container p-6 md:p-8">
+        <!-- Header and Navigation Tabs -->
+        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-6 text-center">Cyber Fraud Case: Jordan Reynolds</h1>
+
+        <div class="flex flex-wrap justify-center bg-gray-100 rounded-lg p-2 mb-8 shadow-sm">
+            <button class="tab-button flex-1 py-3 px-4 rounded-lg text-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" data-target="overview-sheet">Overview</button>
+            <button class="tab-button flex-1 py-3 px-4 rounded-lg text-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" data-target="policing-sheet">Policing</button>
+            <button class="tab-button flex-1 py-3 px-4 rounded-lg text-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" data-target="courts-sheet">Courts</button>
+            <button class="tab-button flex-1 py-3 px-4 rounded-lg text-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" data-target="corrections-sheet">Corrections</button>
+        </div>
+
+        <!-- Sheet 1: Overview -->
+        <div id="overview-sheet" class="sheet active p-4 md:p-6 bg-white rounded-lg shadow-inner">
+            <h2 class="text-2xl font-bold text-gray-700 mb-4">Case Overview</h2>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold text-gray-600 mb-2">Case Summary:</h3>
+                <p class="text-gray-700 leading-relaxed">Jordan Reynolds, a 28-year-old resident of Washington, has been arrested on charges of cyber fraud and identity theft.</p>
+            </div>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold text-gray-600 mb-2">Crime Details:</h3>
+                <p class="text-gray-700 leading-relaxed">Jordan Reynolds used sophisticated phishing techniques and malware to acquire stolen financial data, which he then used to commit multiple instances of wire fraud, transferring funds from victims' bank accounts to his own shell accounts.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold text-gray-600 mb-2">Legal Statutes:</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li><strong>Identity Theft:</strong> Washington State Law – RCW 9A.56.020 – Classified as a Felony.</li>
+                    <li><strong>Wire Fraud:</strong> Federal Crime – 18 U.S.C. §1343.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sheet 2: Policing (Arrest & Investigation) -->
+        <div id="policing-sheet" class="sheet p-4 md:p-6 bg-white rounded-lg shadow-inner">
+            <h2 class="text-2xl font-bold text-gray-700 mb-4">Policing: Arrest & Investigation</h2>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold text-gray-600 mb-2">How Law Enforcement Tracked Jordan:</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>The FBI cybercrime unit initiated an investigation after receiving multiple reports of fraudulent transactions linked by a unique digital footprint.</li>
+                    <li>Advanced digital forensic analysis of server logs and cryptocurrency transactions led agents to Jordan's IP address and online aliases.</li>
+                    <li>A court-ordered warrant allowed for the monitoring of his online activities, ultimately pinpointing his physical location.</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold text-gray-600 mb-2">Arrest Details:</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Jordan Reynolds was arrested at his apartment in Seattle, Washington, during an early morning raid.</li>
+                    <li>During the arrest, agents discovered extensive evidence, including hard drives containing vast amounts of stolen financial data, direct access to hacked bank accounts, and several high-quality fake identification documents.</li>
+                    <li>Forensic teams immediately began processing his digital devices for further evidence.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sheet 3: Courts (Trial & Sentencing) -->
+        <div id="courts-sheet" class="sheet p-4 md:p-6 bg-white rounded-lg shadow-inner">
+            <h2 class="text-2xl font-bold text-gray-700 mb-4">Courts: Trial & Sentencing</h2>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold text-gray-600 mb-2">Charges & Legal Process:</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Jordan Reynolds faces serious charges including multiple counts of identity theft (state) and wire fraud (federal).</li>
+                    <li>Due to the nature of the crimes, the case falls under both federal and state jurisdiction, with the federal charges likely taking precedence given their severity and interstate implications.</li>
+                </ul>
+            </div>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-600 mb-3">Plea Bargain vs. Trial Outcomes:</h3>
+                <p class="text-gray-700 mb-3">Select an option below to see the potential sentencing:</p>
+                <select id="plea-trial-select" class="form-select block w-full px-4 py-2 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-lg transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none shadow-sm cursor-pointer">
+                    <option value="default" selected disabled>Choose an outcome...</option>
+                    <option value="plea">Plea Bargain (Guilty Plea)</option>
+                    <option value="trial">Trial (Conviction)</option>
+                </select>
+            </div>
+
+            <div id="sentencing-display" class="mb-4">
+                <h3 class="text-xl font-semibold text-gray-600 mb-3">Sentencing Options:</h3>
+                <div id="plea-sentencing" class="sentencing-option bg-gray-100 text-gray-700">
+                    <p class="font-bold">Plea Deal:</p>
+                    <p><span class="font-semibold" id="plea-years">5 years</span> in federal prison + <span class="font-semibold" id="plea-fine">$50,000</span> fine.</p>
+                </div>
+                <div id="trial-sentencing" class="sentencing-option bg-gray-100 text-gray-700">
+                    <p class="font-bold">Trial Conviction:</p>
+                    <p><span class="font-semibold" id="trial-years">10 years</span> in federal prison + <span class="font-semibold" id="trial-fine">$100,000</span> fine.</p>
+                </div>
+            </div>
+
+            <div id="calculations-summary" class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Summary of Selected Outcome:</h3>
+                <p class="text-blue-800"><span id="summary-decision" class="font-bold">No decision made yet.</span></p>
+                <p class="text-blue-800">Prison Sentence: <span id="summary-prison-years" class="font-bold">N/A</span></p>
+                <p class="text-blue-800">Total Fines: <span id="summary-fines" class="font-bold">N/A</span></p>
+            </div>
+        </div>
+
+        <!-- Sheet 4: Corrections (Punishment & Rehabilitation) -->
+        <div id="corrections-sheet" class="sheet p-4 md:p-6 bg-white rounded-lg shadow-inner">
+            <h2 class="text-2xl font-bold text-gray-700 mb-4">Corrections: Punishment & Rehabilitation</h2>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold text-gray-600 mb-2">Prison Time vs. Probation:</h3>
+                <div id="corrections-details" class="text-gray-700 leading-relaxed">
+                    <p>Select an outcome in the "Courts" tab to see details here.</p>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold text-gray-600 mb-2">Fines & Restitution:</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Jordan Reynolds will be mandated to repay all victims for financial losses incurred due to his cyber fraud activities. This restitution is separate from any imposed fines.</li>
+                    <li>Mandatory financial ethics training programs will be required as part of his sentence, aiming to prevent future offenses.</li>
+                    <li id="total-restitution-corrections">Total Fines and Restitution: <span class="font-bold" id="corrections-fines">N/A</span> (Based on Court Decision)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle sheet navigation and interactive elements
+
+        // Get all tab buttons and sheets
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const sheets = document.querySelectorAll('.sheet');
+
+        // Function to show a specific sheet and update active tab
+        function showSheet(targetId) {
+            // Remove active class from all sheets and buttons
+            sheets.forEach(sheet => sheet.classList.remove('active'));
+            tabButtons.forEach(button => button.classList.remove('active'));
+
+            // Add active class to the target sheet
+            document.getElementById(targetId).classList.add('active');
+
+            // Add active class to the clicked button
+            document.querySelector(`[data-target="${targetId}"]`).classList.add('active');
+        }
+
+        // Add click event listeners to tab buttons
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.dataset.target;
+                showSheet(targetId);
+            });
+        });
+
+        // Initialize by showing the first sheet (Overview)
+        showSheet('overview-sheet');
+
+
+        // Interactive elements for Courts (Sheet 3)
+        const pleaTrialSelect = document.getElementById('plea-trial-select');
+        const pleaSentencingDiv = document.getElementById('plea-sentencing');
+        const trialSentencingDiv = document.getElementById('trial-sentencing');
+
+        const summaryDecision = document.getElementById('summary-decision');
+        const summaryPrisonYears = document.getElementById('summary-prison-years');
+        const summaryFines = document.getElementById('summary-fines');
+
+        // Corrections Sheet elements
+        const correctionsDetails = document.getElementById('corrections-details');
+        const correctionsFines = document.getElementById('corrections-fines');
+
+        // Event listener for the dropdown menu
+        pleaTrialSelect.addEventListener('change', (event) => {
+            const selectedOption = event.target.value;
+
+            // Reset active classes
+            pleaSentencingDiv.classList.remove('active-plea', 'active-trial');
+            trialSentencingDiv.classList.remove('active-plea', 'active-trial');
+
+            let prisonYears = 'N/A';
+            let fines = 'N/A';
+            let decisionText = 'No decision made yet.';
+            let correctionsText = '';
+
+            if (selectedOption === 'plea') {
+                pleaSentencingDiv.classList.add('active-plea');
+                prisonYears = 5;
+                fines = 50000;
+                decisionText = 'Plea Bargain (Guilty Plea)';
+                correctionsText = `If Jordan pleads guilty, he will be sentenced to <strong>${prisonYears} years</strong> in federal prison. He will be eligible for parole after serving approximately <strong>${(prisonYears * 2 / 3).toFixed(2)} years</strong> (⅔ of sentence). Alternatively, if probation is granted, he must attend mandated cybercrime rehabilitation programs.`;
+            } else if (selectedOption === 'trial') {
+                trialSentencingDiv.classList.add('active-trial');
+                prisonYears = 10;
+                fines = 100000;
+                decisionText = 'Trial (Conviction)';
+                correctionsText = `If Jordan is convicted after a trial, he will be sentenced to <strong>${prisonYears} years</strong> in federal prison. He will be eligible for parole after serving approximately <strong>${(prisonYears * 2 / 3).toFixed(2)} years</strong> (⅔ of sentence). This outcome generally does not involve probation due to the severity.`;
+            }
+
+            // Update summary section
+            summaryDecision.textContent = decisionText;
+            summaryPrisonYears.textContent = prisonYears !== 'N/A' ? `${prisonYears} years` : 'N/A';
+            summaryFines.textContent = fines !== 'N/A' ? `$${fines.toLocaleString()}` : 'N/A';
+
+            // Update Corrections Sheet
+            correctionsDetails.innerHTML = correctionsText;
+            correctionsFines.textContent = fines !== 'N/A' ? `$${fines.toLocaleString()}` : 'N/A';
+        });
+    </script>
+</body>
+</html>
