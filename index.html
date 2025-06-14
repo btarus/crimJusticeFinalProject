@@ -74,25 +74,30 @@
             color: #1d4ed8; /* A darker blue for good visibility */
             font-weight: 600;
         }
-        /* Background image for Overview page */
+        /* Background for Overview page - NO IMAGE */
         #overview-sheet {
-            /* background-image: img src ="crimJusticeFinalProject/images/image.png" alt = "CYBER CRIME"; /* Placeholder image */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: #333; /* Adjust text color for readability over image */
+            background-image: none; 
+            background-color: #ffffff; /* Set a solid background color */
+            color: #333; /* Ensure text color is appropriate for white background */
         }
-        /* Ensure text is readable over background image */
+        /* Ensure text is readable over solid background */
         #overview-sheet h2,
         #overview-sheet h3,
         #overview-sheet p,
         #overview-sheet li {
-            background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background for text */
+            background-color: transparent; /* Remove semi-transparent background for text */
+            padding: 0; /* Remove padding if not needed for transparent background */
+            border-radius: 0;
+            margin-bottom: 0.5rem;
+            box-shadow: none;
+        }
+        #overview-sheet h2 {
+            background-color: #ffffff; /* Keep original background for heading */
             padding: 0.5rem;
             border-radius: 0.375rem;
-            margin-bottom: 0.5rem;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
+
 
         footer {
             position: absolute;
@@ -118,6 +123,7 @@
             <button class="tab-button flex-1 py-3 px-4 rounded-lg text-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" data-target="policing-sheet">Policing</button>
             <button class="tab-button flex-1 py-3 px-4 rounded-lg text-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" data-target="courts-sheet">Courts</button>
             <button class="tab-button flex-1 py-3 px-4 rounded-lg text-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" data-target="corrections-sheet">Corrections</button>
+            <button class="tab-button flex-1 py-3 px-4 rounded-lg text-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" data-target="thank-you-sheet">Thank You</button>
         </div>
 
         <!-- Sheet 1: Overview -->
@@ -134,7 +140,7 @@
             <div>
                 <h3 class="text-xl font-semibold mb-2">Legal Statutes:</h3>
                 <ul class="list-disc list-inside space-y-2">
-                    <li><strong>Identity Theft:</strong> Washington State Law – RCW 9A.56.020 and RCW 9A. 9A.90 – Classified as a Felony.</li>
+                    <li><strong>Identity Theft:</strong> Washington State Law – RCW 9A.56.020 and RCW 9A. 9A.90.</li>
                     <li><strong>Wire Fraud:</strong> Federal Crime – 18 U.S.C. §1343.</li>
                 </ul>
             </div>
@@ -219,6 +225,22 @@
                     <li id="total-restitution-corrections">Total Fines and Restitution: <span class="font-bold" id="corrections-fines">N/A</span> (Based on Court Decision)</li>
                 </ul>
             </div>
+        </div>
+
+        <!-- Sheet 5: Thank You & Awareness -->
+        <div id="thank-you-sheet" class="sheet p-4 md:p-6 bg-white rounded-lg shadow-inner text-center">
+            <h2 class="text-3xl font-extrabold text-gray-800 mb-6">Thank You for Reading!</h2>
+            <h3 class="text-2xl font-bold text-blue-700 mb-4">Protect Yourself from Cyber Fraud</h3>
+            <p class="text-lg text-red-600 font-semibold mb-6 leading-relaxed">
+                To those trying to commit this crime: Be warned that these actions carry severe legal consequences, including significant prison time and huge fines.
+            </p>
+
+            <h3 class="text-xl font-semibold text-gray-600 mb-3 mt-8">References:</h3>
+            <ul class="list-disc list-inside text-center text-gray-700 space-y-2">
+                <li><a href="https://app.leg.wa.gov/RCW/default.aspx?cite=9A" target="_blank" class="text-blue-600 hover:underline">Revised Code of Washington (RCW) - Title 9A: Crimes</a></li>
+                <li><a href="https://www.justice.gov/archives/jm/criminal-resource-manual-941-18-usc-1343-elements-wire-fraud" target="_blank" class="text-blue-600 hover:underline">U.S. Department of Justice - Wire Fraud (18 U.S.C. §1343)</a></li>
+                <li><a href="https://www.ic3.gov/" target="_blank" class="text-blue-600 hover:underline">Federal Bureau of Investigation (FBI) - Internet Crime Complaint Center (IC3)</a></li>
+            </ul>
         </div>
     </div>
 
